@@ -1,0 +1,31 @@
+* {
+  /* border: 1px solid red; */
+}
+.none-el {
+  display: none;
+}
+.hidden-el {
+  visibility: hidden;
+}
+p {
+  display: inline;
+  padding: 10px;
+  margin: 20px;
+}
+a {
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid blue;
+  background-color: lightblue;
+  margin: 10px 10px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+/* none, block, inline, inline-block, flex, grid */
+
+/* Position Property */
+/* static, relative, absolute, fixed, sticky */

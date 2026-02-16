@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media</title>
+  </head>
+  <body>
+    <!-- audio -->
+    <audio id="myAudio" src="./cathwong.mp3" type="audio/mp3" controls></audio>
+    <br />
+    <!-- audio with message -->
+    <audio id="myAudio" controls>
+      <source src="./cathwong.mp3" type="audio/mp3" />
+      <p>Your browser does not support the audio element.</p>
+    </audio>
+    <br />
+    <!-- audio with autoplay -->
+    <!-- <audio controls autoplay>
+      <source src="./cathwong.mp3" type="audio/mp3" />
+      <p>Your browser does not support the audio element.</p>
+    </audio> -->
+    <br />
+    <!-- audio with loop -->
+    <audio id="myAudio" controls loop>
+      <source src="./cathwong.mp3" type="audio/mp3" />
+      <p>Your browser does not support the audio element.</p>
+    </audio>
+    <br />
+    <!-- audio with autoplay & loop -->
+    <audio id="myAudio" controls autoplay loop>
+      <source src="./cathwong.mp3" type="audio/mp3" />
+      <p>Your browser does not support the audio element.</p>
+    </audio>
+    <br />
+    <!-- video autoplay -->
+    <video
+      id="myVideo"
+      width="400"
+      height="300"
+      autoplay
+      controls
+      src="./7506.MOV"
+      type="video/quicktime"
+    >
+      <p>Your browser does not support the Video element.</p>
+    </video>
+    <br />
+    <!-- Youtube video with autoplay -->
+    <!-- To make an embedded video auto-play, add '&autoplay=1' to the video's embed code right after the video ID (the series of letters that follows 'embed/'). -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/xi8Z-BdLuLo?si=YgpsNghjrjwGD5AG&autoplay=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <br />
+    <br />
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37775.21634501909!2d-1.6304244499999878!3d53.71913489999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795e484c32b83d%3A0x1387a8d9db7750ef!2sMorley!5e0!3m2!1sen!2suk!4v1770171963245!5m2!1sen!2suk"
+      width="400"
+      height="300"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <br />
+    <!-- Example:
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/D6Ac5JpCHmI?&autoplay=1"frameborder="0"
+allowfullscreen></iframe> -->
+    <iframe
+      src="./iCloud Mail.pdf"
+      frameborder="0"
+      width="400"
+      height="300"
+    ></iframe>
+    <br />
+    <script>
+      const audio = document.getElementById("myAudio");
+      const video = document.getElementById("myVideo");
+
+      // Function to attempt playback
+      const startMedia = () => {
+        // Play audio
+        audio
+          .play()
+          .catch((error) => console.log("Audio waiting for interaction"));
+
+        // Play video
+        video
+          .play()
+          .catch((error) => console.log("Video waiting for interaction"));
+
+        // Once played, remove the listener so it doesn't run every time they click
+        document.removeEventListener("click", startMedia);
+      };
+
+      // Listen for the first click on the page to trigger autoplay
+      document.addEventListener("click", startMedia);
+    </script>
+  </body>
+</html>

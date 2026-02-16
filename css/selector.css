@@ -1,0 +1,93 @@
+/* universal selector */
+* {
+  word-spacing: 3px;
+}
+/* element selector */
+h2 {
+  color: #55eb14;
+}
+#heading {
+  color: blue;
+}
+#unique-box {
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+/* class's direct element */
+.box > h2 {
+  color: red;
+}
+/* #unique-box h2 {
+  color: yellow;
+} */
+/* element's direct child */
+span > h2 {
+  color: blueviolet;
+}
+/* class direct class */
+.box > .child {
+  color: peru;
+}
+
+/* span > h3 {
+  color: hotpink;
+} */
+.simple {
+  color: lime;
+}
+.box {
+  background-color: #c28465f1;
+}
+/* multiple classes with element */
+.inner-box.first-box {
+  color: purple;
+}
+/* .first-box {
+  color: rgb(33, 99, 192);
+} */
+/* descenting class child, grancild */
+.box .inner-box {
+  background-color: aquamarine;
+}
+/* dwscent element child, grancild */
+div h2 {
+  font-size: 60px;
+}
+/* adjacent sibling */
+.first + li {
+  background-color: rgb(47, 195, 195);
+}
+/* general slibling */
+.first ~ li {
+  color: red;
+}
+/* n-chilld */
+ul li:nth-child(3) {
+  font-size: 50px;
+}
+ul li:nth-child(2n) {
+  font-size: 30px;
+}
+ul li:nth-child(3n - 2) {
+  font-size: 10px;
+}
+/* attribute */
+input[type="text"] {
+  border: 2px solid blue;
+  padding: 15px;
+}
+/* pseudo element */
+p::first-line {
+  font-weight: bold;
+}
+/* pseudo-class */
+.pseudo-class:hover {
+  color: #ff5733;
+  text-decoration: underline;
+}
+/* muliple selectors */
+h4,
+h5 {
+  font-size: 26px;
+}
