@@ -77,15 +77,16 @@ body {
   position: fixed;
   top: 41px;
   width: 100%;
-  height: calc(100vh - 89px);
+  height: calc(100vh - 82px);
   overflow: hidden;
 }
-.con iframe[name=incontent],
+.con iframe[name="incontent"],
 .con .content {
   width: 100%;
   height: 100%;
   border: none;
 }
+/* This styles the image inside the iframe area */
 
 .end {
   background: black;
@@ -93,4 +94,4 @@ body {
   text-align: center;
   padding: 10px 0;
   font-size: 28px;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

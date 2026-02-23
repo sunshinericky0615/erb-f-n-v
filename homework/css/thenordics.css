@@ -2,6 +2,102 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* CHANGE: Set to none here */
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #c0a0ba; /* Optional background color */
+  h1 {
+    text-align: center;
+  }
+}
 
-  background: black; /* CHANGE: Set to none here */
+.main {
+  width: 100%;
+  max-width: 2100px;
+  height: 1100px;
+  display: flex;
+  justify-content: center;
+  background: wheat;
+  border: 2px solid rgb(219, 103, 103);
+}
+.midconcard {
+  display: grid;
+  /* Creates 4 equal columns using 'fraction' units */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* Space between the cards */
+  max-width: 2000px; /* Limits the total width */
+  margin: 0 auto; /* Centers the whole container on the screen */
+  padding: 50px 50px 50px 50px;
+  height: 1000px;
+  border: 2px solid black;
+  justify-content: center;
+  .inmidcon {
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #ddd; /* Optional: adds a subtle border */
+    /* border-radius: 10px; */
+    overflow: hidden;
+    /* background-color: #f9f9f9; */
+    .midconiceimg {
+      max-width: 500px;
+      display: flex;
+      padding: 5px 5px 7px 5px;
+      margin: 5px 5px 5px 5px;
+      text-align: center;
+      border: 2px solid red;
+    }
+    .midconfinimg {
+      max-width: 500px;
+      display: flex;
+      padding: 5px 5px 7px 5px;
+      margin: 5px 5px 5px 5px;
+      text-align: center;
+      border: 2px solid blue;
+    }
+    .midconsweimg {
+      max-width: 500px;
+      padding: 5px 5px 7px 5px;
+      margin: 5px 5px 5px 5px;
+      text-align: center;
+      border: 2px solid lightcoral;
+    }
+    .midconnorimg {
+      max-width: 500px;
+      padding: 5px 5px 7px 5px;
+      margin: 5px 5px 5px 5px;
+      text-align: center;
+      border: 2px solid lightblue;
+    }
+  }
+  .norcon {
+    border: 2px solid black;
+    height: 280px;
+  }
+  .swecon {
+    border: 2px solid brown;
+    height: 270px;
+  }
+  .fincon {
+    border: 2px solid navy;
+    height: 350px;
+  }
+  .icecon {
+    border: 2px solid slateblue;
+    height: 350px;
+  }
+}
+
+.inmidcon img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.text {
+  font-size: 50px;
+  text-align: center;
 }
