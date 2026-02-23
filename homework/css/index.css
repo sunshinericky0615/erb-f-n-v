@@ -77,7 +77,7 @@ body {
   position: fixed;
   top: 41px;
   width: 100%;
-  height: calc(100vh - 82px);
+  height: calc(100vh - 89px);
   overflow: hidden;
 }
 .con iframe[name="incontent"],
@@ -86,7 +86,6 @@ body {
   height: 100%;
   border: none;
 }
-/* This styles the image inside the iframe area */
 
 .end {
   background: black;
