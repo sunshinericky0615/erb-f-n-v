@@ -27,7 +27,7 @@ body {
 }
 
 .nav {
-  height: 41px;
+  height: 53px;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -88,9 +88,40 @@ body {
 }
 
 .end {
-  background: black;
-  color: white;
+  /* background: black; */
+  color: black;
   text-align: center;
   padding: 10px 0;
   font-size: 28px;
 } /*# sourceMappingURL=index.css.map */
+/* 1. Hide the original "Welcome" text when ANY nav item is hovered */
+body:has(.nav li:hover) .end p {
+  font-size: 0;
+}
+body:has(.icon:hover) .end p::after {
+  content: "Welcome to the Nordics";
+  font-size: 28px;
+  visibility: visible;
+}
+/* 2. Inject "Iceland" when .iceland is hovered */
+body:has(.iceland:hover) .end p::after {
+  content: "Iceland";
+  font-size: 28px;
+  visibility: visible;
+}
+
+/* 3. Do the same for other countries */
+body:has(.finland:hover) .end p::after {
+  content: "Finland";
+  font-size: 28px;
+}
+
+body:has(.sweden:hover) .end p::after {
+  content: "Sweden";
+  font-size: 28px;
+}
+
+body:has(.norway:hover) .end p::after {
+  content: "Norway";
+  font-size: 28px;
+}

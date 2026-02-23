@@ -49,9 +49,41 @@
         </article>
       </div>
       <div class="box-end">
-        <div class="end"><p>text</p></div>
+        <div class="end"><p>Welcome to the nordicse</p></div>
       </div>
     </main>
+    <script>
+      // 1. Select the iframe and the footer text element
+      const iframe = document.querySelector('iframe[name="incontent"]');
+      const footerText = document.querySelector(".end p");
+
+      // 2. Listen for the 'load' event (fires whenever the src changes)
+      iframe.addEventListener("load", function () {
+        try {
+          // 3. Get the filename from the current iframe URL
+          const currentPath = iframe.contentWindow.location.pathname;
+          const fileName = currentPath.split("/").pop();
+
+          // 4. Update the text based on the file loaded
+          if (fileName === "iceland.html") {
+            footerText.innerText = "Welcome to Iceland";
+          } else if (fileName === "finland.html") {
+            footerText.innerText = "Welcome to Finland";
+          } else if (fileName === "sweden.html") {
+            footerText.innerText = "Welcome to Sweden";
+          } else if (fileName === "norway.html") {
+            footerText.innerText = "Welcome to Norway";
+          } else {
+            footerText.innerText = "Welcome to the Nordics";
+          }
+        } catch (e) {
+          // In case of cross-origin or local file restrictions
+          console.log(
+            "Could not read iframe path, ensure files are on the same server.",
+          );
+        }
+      });
+    </script>
   </body>
 </html>
 <!-- height="1350px 1350px" -->

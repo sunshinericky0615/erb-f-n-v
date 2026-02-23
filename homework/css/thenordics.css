@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Delicious Handrawn", Arial, sans-serif;
 }
 
 body {
@@ -9,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #c0a0ba;
+  background: url(./nordicswalp.avif);
 }
 
 .main {
@@ -17,11 +18,24 @@ body {
   max-width: 2100px;
   height: 1100px;
   display: flex;
-  justify-content: center;
-  background: wheat;
-  border: 2px solid rgb(219, 103, 103);
-}
+  flex-direction: column;
+  align-items: center;
+  /* CHANGE: Use space-between to push h1 up and grid down, 
+     or keep flex-start and let the grid center itself */
+  justify-content: flex-start;
 
+  padding: 40px 0;
+  padding-bottom: 150px;
+}
+.text-h1 {
+  width: 100%;
+  text-align: center;
+  /* Keeps it at the top */
+  margin-bottom: auto;
+  h1 {
+    font-size: 60px;
+  }
+}
 .midconcard {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -29,17 +43,22 @@ body {
   padding: 50px;
   width: 100%;
   max-width: 2000px;
-  height: 1000px;
-  border: 2px solid black;
+  /* Remove height: 500px to allow flex centering to work better */
+  height: auto;
+
+  /* THIS CENTERS THE GRID IN THE MIDDLE OF .MAIN */
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* Shared Card Styles */
 .inmidcon {
   margin: 20px;
+  padding: 20px;
   text-align: center;
-  border: 1px solid #ddd;
+
   overflow: hidden;
-  transition: all 0.4s ease; /* For smooth onmouseover effects */
+  justify-content: center;
 }
 
 /* Simplified Image Handling */
@@ -50,36 +69,22 @@ body {
   padding: 5px;
   margin: 5px;
   border-radius: 10px;
-  border: 2px solid transparent; /* Placeholder for specific colors */
 }
 
 /* Specific Card Heights & Border Colors */
 .icecon {
-  border: 2px solid slateblue;
   height: 350px;
-}
-.icecon img {
-  border-color: red;
 }
 
 .fincon {
-  border: 2px solid navy;
   height: 350px;
-}
-.fincon img {
-  border-color: blue;
 }
 
 .swecon {
-  border: 2px solid brown;
   height: 270px;
-}
-.swecon img {
-  border-color: lightcoral;
 }
 
 .norcon {
-  border: 2px solid black;
   height: 280px;
 }
 .norcon img {
@@ -89,4 +94,53 @@ body {
 .text {
   font-size: 50px;
   text-align: center;
+}
+
+/* When the body has an .icecon element being hovered, change the body background */
+body:has(.icecon:hover) {
+  background: url(./icelandwalp.avif);
+  .icecon p {
+    color: #a0c4ff;
+    font-size: 60px;
+  }
+  .text-h1 h1 {
+    color: #a0c4ff;
+    font-size: 90px;
+  }
+}
+/* When the body has an .fincon element being hovered, change the body background */
+body:has(.fincon:hover) {
+  background: url(./finlandwalp.avif);
+  .fincon p {
+    color: #c2a9cd;
+    font-size: 60px;
+  }
+  .text-h1 h1 {
+    color: #c2a9cd;
+    font-size: 90px;
+  }
+}
+/* When the body has an .swecon element being hovered, change the body background */
+body:has(.swecon:hover) {
+  background: url(./swedenwalp.avif);
+  .swecon p {
+    color: #fff;
+    font-size: 60px;
+  }
+  .text-h1 h1 {
+    color: #fff;
+    font-size: 90px;
+  }
+}
+/* When the body has an .norcon element being hovered, change the body background */
+body:has(.norcon:hover) {
+  background: url(./norwaywalp.avif);
+  .norcon p {
+    color: #93dbc4;
+    font-size: 60px;
+  }
+  .text-h1 h1 {
+    color: #93dbc4;
+    font-size: 90px;
+  }
 }
