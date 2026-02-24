@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Delicious Handrawn", Arial, sans-serif;
-  text-decoration: none;
+  text-decoration: nonew;
 }
 
 body {
@@ -106,6 +106,7 @@ body {
 body:has(.icecon:hover) {
   max-width: 100%;
   background: url(./icelandwalp.avif);
+  cursor: pointer;
   .icecon p {
     color: #a0c4ff;
     font-size: 60px;
@@ -119,6 +120,7 @@ body:has(.icecon:hover) {
 body:has(.fincon:hover) {
   max-width: 100%;
   background: url(./finlandwalp.avif);
+  cursor: pointer;
   .fincon p {
     color: #fff;
     font-size: 60px;
@@ -132,6 +134,7 @@ body:has(.fincon:hover) {
 body:has(.swecon:hover) {
   max-width: 100%;
   background: url(./swedenwalp.avif);
+  cursor: pointer;
   .swecon p {
     color: #c2a9cd;
     font-size: 60px;
@@ -145,6 +148,7 @@ body:has(.swecon:hover) {
 body:has(.norcon:hover) {
   max-width: 100%;
   background: url(./norwaywalp.avif);
+  cursor: pointer;
   .norcon p {
     color: #93dbc4;
     font-size: 60px;
