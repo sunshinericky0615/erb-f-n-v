@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Delicious Handrawn", Arial, sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -75,18 +76,22 @@ body {
 /* Specific Card Heights & Border Colors */
 .icecon {
   height: 350px;
+  /* position: absolute; */
 }
 
 .fincon {
   height: 350px;
+  /* position: absolute; */
 }
 
 .swecon {
   height: 270px;
+  /* position: absolute; */
 }
 
 .norcon {
   height: 280px;
+  /* position: absolute; */
 }
 .norcon img {
   border-color: lightblue;
