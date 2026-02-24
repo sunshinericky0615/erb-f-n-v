@@ -72,6 +72,11 @@ img {
 }
 .navbar .mobile-menu-list li {
   margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.navbar .mobile-menu-list li:hover {
+  color: blue;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .navbar .mobile-menu {
