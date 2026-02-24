@@ -112,11 +112,11 @@ body:has(.icecon:hover) {
 body:has(.fincon:hover) {
   background: url(./finlandwalp.avif);
   .fincon p {
-    color: #c2a9cd;
+    color: #fff;
     font-size: 60px;
   }
   .text-h1 h1 {
-    color: #c2a9cd;
+    color: #fff;
     font-size: 90px;
   }
 }
@@ -124,11 +124,11 @@ body:has(.fincon:hover) {
 body:has(.swecon:hover) {
   background: url(./swedenwalp.avif);
   .swecon p {
-    color: #fff;
+    color: #c2a9cd;
     font-size: 60px;
   }
   .text-h1 h1 {
-    color: #fff;
+    color: #c2a9cd;
     font-size: 90px;
   }
 }
