@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  max-width: 100%;
   background: url(./nordicswalp.avif);
 }
 
@@ -98,6 +99,7 @@ body {
 
 /* When the body has an .icecon element being hovered, change the body background */
 body:has(.icecon:hover) {
+  max-width: 100%;
   background: url(./icelandwalp.avif);
   .icecon p {
     color: #a0c4ff;
@@ -110,6 +112,7 @@ body:has(.icecon:hover) {
 }
 /* When the body has an .fincon element being hovered, change the body background */
 body:has(.fincon:hover) {
+  max-width: 100%;
   background: url(./finlandwalp.avif);
   .fincon p {
     color: #fff;
@@ -122,6 +125,7 @@ body:has(.fincon:hover) {
 }
 /* When the body has an .swecon element being hovered, change the body background */
 body:has(.swecon:hover) {
+  max-width: 100%;
   background: url(./swedenwalp.avif);
   .swecon p {
     color: #c2a9cd;
@@ -134,6 +138,7 @@ body:has(.swecon:hover) {
 }
 /* When the body has an .norcon element being hovered, change the body background */
 body:has(.norcon:hover) {
+  max-width: 100%;
   background: url(./norwaywalp.avif);
   .norcon p {
     color: #93dbc4;
