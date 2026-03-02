@@ -32,3 +32,13 @@ console.log(document.querySelector("#app-title")); // select by id
 console.log(document.querySelector(".container")); // select by class name
 console.log(document.querySelector("input[type='text']")); // select by attribute
 console.log(document.querySelector("li:nth-child(2)")); // select by pseudo class
+const secondItem = document.querySelector("li:nth-child(2)");
+secondItem.innerText = "Mango Juice";
+secondItem.style.color = "orange";
+const list = document.querySelector("ul");
+console.log(list);
+//  narrow down the search scope by chaining querySelector
+const firstItem = list.querySelector("li");
+firstItem.style.color = "purple";
+// ==============================================
+// all the above methods are return single html element
