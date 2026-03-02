@@ -21,4 +21,21 @@ output = secondChild.nextElementSibling;
 // nodelist
 // const parent = document.querySelector(".parent");
 output = parent.childNodes;
+output = parent.childNodes[3].nodeName;
+output = parent.childNodes[3].nodeType;
+// complete node structure
+output = parent.childNodes[3].outerHTML;
+// from parent to child node
+output = parent.firstChild;
+output = parent.lastChild;
+output = parent.lastChild.textContent = "Hello";
+// traverse the dom from child to parent
+const childNodes = document.querySelector(".item");
+output = childNodes; //first li
+output = childNodes.parentNode; //ul
+// traverse the dom from sibling to sibling
+output = childNodes.nextSibling;
+output = childNodes.previousSibling;
 console.log(output);
+// ============================
+// why nodelist ? nodelist returtn a static value, it will not change when the dom changes, while html collection will change when the dom changes
