@@ -16,5 +16,19 @@ document.getElementById("app-title").setAttribute("class", "text-green");
 // case f. save the element to a variable for variuos operations
 const title = document.getElementById("app-title");
 console.log(title.textContent.textContent);
+// html text - faster and direct access
 title.textContent = "Hello World";
-// title.innerText = "Hello again";
+// inner text - slower and involve css style calculation
+title.innerText = "Hello again";
+// innerHTML - can insert html tags in string format
+title.innerHTML = "<strong>Shopping List</strong>";
+// case g. update inline 'css style/attributes' by dot notation change css properties in camelCase
+title.style.color = "blue";
+title.style.fontSize = "40px";
+title.style.backgroundColor = "yellow";
+// case h. querySelectr , return first result - single elment
+console.log(document.querySelector("h1")); // select by tag name
+console.log(document.querySelector("#app-title")); // select by id
+console.log(document.querySelector(".container")); // select by class name
+console.log(document.querySelector("input[type='text']")); // select by attribute
+console.log(document.querySelector("li:nth-child(2)")); // select by pseudo class
