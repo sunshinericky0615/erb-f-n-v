@@ -574,13 +574,16 @@ html {
   min-height: 200px;
 } /* Parent */
 
-#nextBtn {
-  position: fixed;
+.bottom-right-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  position: fixed; /* Or absolute */
   bottom: 20px;
   right: 20px;
-  z-index: 1000; /* Ensure it stays above other content */
-  padding: 10px 20px;
-  cursor: pointer;
 }
 
 /* Optional: Smooth scrolling effect */
