@@ -15,17 +15,18 @@
     <title>Tour</title>
   </head>
   <body>
+    <!-- todo : navbar fixed the spacing between items -->
     <nav class="navbar">
       <div class="container navbar-flex">
         <img src="./assets/TBC.png" alt="logo" class="logo" />
         <div class="main-menu">
-          <ul class="footer-menu-list">
+          <ul class="main-menu-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#tours">Tours</a></li>
           </ul>
-          <ul class="footer-menu-icons">
+          <ul class="main-menu-icons">
             <li>
               <a
                 href="http://www.instragram.com"
@@ -61,11 +62,97 @@
         </div>
       </div>
     </nav>
-    <section class="hero" id="home"></section>
-    <section class="secition about" id="about"></section>
-    <section class="secition services" id="services"></section>
-    <section class="secition tours" id="tours"></section>
-    <section class="secition footer"></section>
+    <section class="hero" id="home">
+      <div class="hero container">
+        <h1>continue exploring</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+          sint.
+        </p>
+        <a href="#tours" class="btn hero-btn">explore tours</a>
+      </div>
+    </section>
+    <section class="section about" id="about">
+      <h2>about <span>us</span></h2>
+      <div class="about-center">
+        <div class="about-img">
+          <img src="./assets/about.png" alt="" />
+        </div>
+        <article class="about-info">
+          <h3>Lorem, ipsum dolor.</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum dolor.</p>
+          <a href="#" class="btn">read more</a>
+        </article>
+      </div>
+    </section>
+    <section class="section services" id="services">
+      <h2>our <span>services</span></h2>
+      <div class="services-center">
+        <article class="service">
+          <spen class="service-icon">
+            <i class="fa-solid fa-wallet"></i>
+          </spen>
+          <div class="service-info">
+            <h4>save money</h4>
+          </div>
+          <div class="service-text">
+            <p>
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem
+              ipsum dolor sit amet.
+            </p>
+          </div>
+        </article>
+        <article class="service">
+          <spen class="service-icon">
+            <i class="fa-solid fa-tree"></i>
+          </spen>
+          <div class="service-info">
+            <h4>endless hiking</h4>
+          </div>
+          <div class="service-text">
+            <p>
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem
+              ipsum dolor sit amet.
+            </p>
+          </div>
+        </article>
+        <article class="service">
+          <spen class="service-icon">
+            <i class="fa-solid fa-socks"></i>
+          </spen>
+          <div class="service-info">
+            <h4>amazing comfort</h4>
+          </div>
+          <div class="service-text">
+            <p>
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem
+              ipsum dolor sit amet.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section tours" id="tours">
+      <h2>featured <span>tours</span></h2>
+    </section>
+    <section class="section footer">
+      <div class="tour-center">
+        <div class="tour-card">
+          <div class="tour-img-container">
+            <img src="./assets/tour1.jpg" alt="" />
+            <p>Aug 26th, 2026</p>
+          </div>
+          <div class="tour-info">
+            <div class="tour-title">
+              <h4>tibet adventure</h4>
+            </div>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="tour-footer"></div>
+        </div>
+      </div>
+    </section>
     <p>
       Copyright &copy; Vivienne travel tours company <span id="date"></span>all
       rights reseved

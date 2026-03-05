@@ -79,29 +79,22 @@ iframe.addEventListener("load", function () {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav a");
-  const iframe = document.querySelector('iframe[name="incontent"]');
   const overlay = document.getElementById("transition-overlay");
+  const navLinks = document.querySelectorAll(".nav a");
 
-  links.forEach((link) => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.preventDefault(); // Stop default jump
-      const targetUrl = this.getAttribute("href");
-
-      // 1. Reset classes and start the flight from Right
+      // 1. 啟動拉入動畫
       overlay.classList.remove("exit");
       overlay.classList.add("active");
 
-      // 2. Mid-flight: Change iframe content when screen is covered
-      setTimeout(() => {
-        iframe.src = targetUrl;
+      // 2. 當遮罩完全蓋住時 (約 0.6s)，頁面內容會透過 target="incontent" 自動切換
 
-        // 3. Complete the flight: Slide out to the Left
-        setTimeout(() => {
-          overlay.classList.add("exit");
-          overlay.classList.remove("active");
-        }, 1500); // Pause briefly for cinematic effect
-      }, 1500); // Must match the CSS transition duration
+      // 3. 停留片刻讓 iframe 載入，然後執行拉出動畫
+      setTimeout(() => {
+        overlay.classList.remove("active");
+        overlay.classList.add("exit");
+      }, 1400); // 1.4秒後飛機拉著舊頁面殘影消失
     });
   });
 });
