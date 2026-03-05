@@ -125,3 +125,39 @@ body:has(.norway:hover) .end p::after {
   content: "Norway";
   font-size: 28px;
 }
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  z-index: 10000;
+  /* Start completely off-screen to the right */
+  transform: translateX(100%);
+  transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+/* The Airplane */
+.airplane {
+  position: absolute;
+  left: -50px; /* Positioned at the leading edge of the overlay */
+  font-size: 50px;
+  transform: rotate(-90deg); /* Points the emoji to the left */
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+/* Slide In Class */
+.page-overlay.active {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* Slide Out Class (to the left) */
+.page-overlay.exit {
+  transform: translateX(-100%);
+}

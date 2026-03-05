@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+:root{
+  --clr-primary-1: #eef0f6;
+  --clr-primary-2: #dde0ee;
+  --clr-primary-3: #bcc1dc;
+  --clr-primary-4: #9aa2cb;
+  --clr-primary-5: #7883ba;
+  --clr-primary-6: #5764a8;
+  --clr-primary-7: #455087;
+  --clr-primary-8: #343c65;
+  --clr-primary-9: #232843;
+  --clr-primary-10:#111422;
+  --clr-primary-11:#0c0e18;
+  --clr-grey-1: #5765a8;
+  --clr-grey-2: #5765a8cb;
+  --clr-grey-3: #5765a8b4;
+  --clr-grey-4: #5765a8a0;
+  --clr-grey-5: #5765a88f;
+  --clr-grey-6: #5765a877;
+  --clr-grey-7: #5765a85a;
+  --clr-grey-8: #5765a847;
+  --clr-grey-9: #5765a82d;
+  --clr-grey-10: #5765a819;
+  --clr-grey-11: #5765a800;
+  --clr-white: #fff;
+  --clr-black: #222;
+  --ff-primary: "Playfair",'Courier New', Courier, monospace;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --dark-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: var(--ff-primary);
+  font-size: 16px;
+  overflow-x: hidden;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.container{max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;}
+.logo{
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.navbar{
+  position: relative;
+}
+.navbar-flex{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 70px;
+  background-color: rgb(181, 233, 247);
+}
+.main-menu-list{
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar li{
+  font-size: large;
+}
+.navbar a:hover{
+  color: blue;
+  cursor: pointer;
+}
+.fa-bars{
+  font-size: 2rem;
+}
+.mobile-menu{
+  display: none;
+}
+.navbar .mobile-menu-items {
+  background-color: brown;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+.navbar .mobile-menu-items.active {
+  transform: translateX(0);
+}
+.navbar .mobile-menu-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 300px;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+@media (max-width:768px) {
+  .mobile-menu{
+    display: block;
+  }
+  .main-menu{
+    display: none;
+  }
+}

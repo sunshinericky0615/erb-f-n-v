@@ -78,3 +78,30 @@ iframe.addEventListener("load", function () {
     console.warn("Iframe access restricted. Run via a Local Server.");
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".nav a");
+  const iframe = document.querySelector('iframe[name="incontent"]');
+  const overlay = document.getElementById("transition-overlay");
+
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // Stop default jump
+      const targetUrl = this.getAttribute("href");
+
+      // 1. Reset classes and start the flight from Right
+      overlay.classList.remove("exit");
+      overlay.classList.add("active");
+
+      // 2. Mid-flight: Change iframe content when screen is covered
+      setTimeout(() => {
+        iframe.src = targetUrl;
+
+        // 3. Complete the flight: Slide out to the Left
+        setTimeout(() => {
+          overlay.classList.add("exit");
+          overlay.classList.remove("active");
+        }, 1500); // Pause briefly for cinematic effect
+      }, 1500); // Must match the CSS transition duration
+    });
+  });
+});

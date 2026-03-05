@@ -1,0 +1,33 @@
+:root {
+  --clr-primary-0: #fce8fc;
+  --clr-primary-1: #fad1f9;
+  --clr-primary-2: #f5a3f2;
+  --clr-primary-3: #f075ec;
+  --clr-primary-4: #eb47e5;
+  --clr-primary-5: #e619df;
+  --clr-primary-6: #b814b2;
+  --clr-primary-7: #8a0f86;
+  --clr-primary-8: #5c0a59;
+  --clr-primary-9: #2e052d;
+  --clr-primary-10: #20041f;
+  /* ccolor grey */
+  --clr-grey-1: #fad1f9;
+  --clr-grey-2: #fad1f9f0;
+  --clr-grey-3: #fad1f9d3;
+  --clr-grey-4: #fad1f9c2;
+  --clr-grey-5: #fad1f9c0;
+  --clr-grey-1: #fad1f9a8;
+  --clr-grey-1: #fad1f990;
+  --clr-grey-1: #fad1f97c;
+  --clr-grey-1: #fad1f97a;
+
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --font-family: "Bitcount Prop Double Ink", system-ui;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
